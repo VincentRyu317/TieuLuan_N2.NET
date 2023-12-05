@@ -50,7 +50,11 @@ namespace QLTN
 
             //Load câu 1:
             CauHoi(i);
-            
+
+            //Danh sách câu hỏi:
+
+
+
         }
         private int _phut;
 
@@ -215,6 +219,16 @@ namespace QLTN
             }
             catch
             { }
+        }
+
+        private void cbb_DsCauHoi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbb_DsCauHoi.Items.Clear();
+            string[] dt = { "Đã trả lời", "Chưa trả lời", "Tất cả câu" };
+            foreach (string s in dt)
+            {
+                cbb_DsCauHoi.Items.Add(s);
+            }
         }
     }
     //

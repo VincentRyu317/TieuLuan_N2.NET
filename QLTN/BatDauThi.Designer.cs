@@ -47,7 +47,7 @@
             this.lbl_useless1 = new System.Windows.Forms.Label();
             this.lbl_Phut = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbb_DsCauHoi = new System.Windows.Forms.ComboBox();
             this.btn_Truoc = new System.Windows.Forms.Button();
             this.btn_Sau = new System.Windows.Forms.Button();
             this.btn_Nop = new System.Windows.Forms.Button();
@@ -61,6 +61,7 @@
             this.Gr_ThongBao = new System.Windows.Forms.GroupBox();
             this.lbl_ThongBao = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.LV_DsCauHoi = new System.Windows.Forms.ListView();
             this.Gr_Đề.SuspendLayout();
             this.Gr_Time.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -257,7 +258,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.LV_DsCauHoi);
+            this.groupBox1.Controls.Add(this.cbb_DsCauHoi);
             this.groupBox1.Location = new System.Drawing.Point(850, 146);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(314, 599);
@@ -265,13 +267,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Câu: ";
             // 
-            // comboBox1
+            // cbb_DsCauHoi
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(33, 40);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(257, 33);
-            this.comboBox1.TabIndex = 0;
+            this.cbb_DsCauHoi.FormattingEnabled = true;
+            this.cbb_DsCauHoi.Location = new System.Drawing.Point(33, 40);
+            this.cbb_DsCauHoi.Name = "cbb_DsCauHoi";
+            this.cbb_DsCauHoi.Size = new System.Drawing.Size(257, 33);
+            this.cbb_DsCauHoi.TabIndex = 0;
+            this.cbb_DsCauHoi.SelectedIndexChanged += new System.EventHandler(this.cbb_DsCauHoi_SelectedIndexChanged);
+            this.cbb_DsCauHoi.Click += new System.EventHandler(this.cbb_DsCauHoi_SelectedIndexChanged);
             // 
             // btn_Truoc
             // 
@@ -407,6 +411,15 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // LV_DsCauHoi
+            // 
+            this.LV_DsCauHoi.HideSelection = false;
+            this.LV_DsCauHoi.Location = new System.Drawing.Point(32, 92);
+            this.LV_DsCauHoi.Name = "LV_DsCauHoi";
+            this.LV_DsCauHoi.Size = new System.Drawing.Size(258, 464);
+            this.LV_DsCauHoi.TabIndex = 1;
+            this.LV_DsCauHoi.UseCompatibleStateImageBehavior = false;
+            // 
             // BatDauThi
             // 
             this.ClientSize = new System.Drawing.Size(1506, 853);
@@ -461,12 +474,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbb_DsCauHoi;
         private System.Windows.Forms.Label lbl_Mon;
         private System.Windows.Forms.Label lbl_MSSV;
         private System.Windows.Forms.Label lbl_HoTen;
         private System.Windows.Forms.Label lbl_ThongBao;
         private System.Windows.Forms.Label lbl_Phut;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ListView LV_DsCauHoi;
     }
 }
