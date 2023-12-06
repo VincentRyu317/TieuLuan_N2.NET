@@ -20,7 +20,7 @@ namespace QLTN
         }
         class Connect
         {
-            private static string connectstring = Properties.Resources.sql;
+            private static string connectstring = @"Data Source=LAPTOP-AD9OSNGE\SQLEXPRESS;Initial Catalog=QLTN;Integrated Security=True";
             public SqlConnection connect;
             public Connect()
             {
@@ -50,7 +50,7 @@ namespace QLTN
                 if (dta.Read() == true)
                 {
                     this.Hide();
-                    BatDauThi form2 = new BatDauThi();
+                    BatDauThi form2 = new BatDauThi(tk);
                     form2.ShowDialog();
                 }
                 else
@@ -71,12 +71,6 @@ namespace QLTN
             cq.ShowDialog();
         }
 
-
-        private void NguoiDung_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void lblDangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
@@ -84,9 +78,9 @@ namespace QLTN
             dk.ShowDialog();
         }
 
-        private void lbl_DoiMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void NguoiDung_Load(object sender, EventArgs e)
         {
-            this.Hide();
+
         }
     }
 }

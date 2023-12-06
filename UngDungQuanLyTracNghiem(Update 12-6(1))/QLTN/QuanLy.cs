@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 namespace QLTN
 {
-    public partial class NguoiDung : Form
+    public partial class QuanLy : Form
     {
-        public NguoiDung()
+        public QuanLy()
         {
             InitializeComponent();
             connsql = kn.connect;
@@ -20,7 +20,7 @@ namespace QLTN
         }
         class Connect
         {
-            private static string connectstring = Properties.Resources.sql;
+            private static string connectstring = @"Data Source=LAPTOP-AD9OSNGE\SQLEXPRESS;Initial Catalog=QLTN;Integrated Security=True";
             public SqlConnection connect;
             public Connect()
             {
@@ -34,23 +34,20 @@ namespace QLTN
         }
         Connect kn = new Connect();
         SqlConnection connsql;
-
-        public static object Rows { get; internal set; }
-
-         public void btnDangNhap_Click(object sender, EventArgs e)
+        private void btnDangNhap_Click(object sender, EventArgs e)
         {
             try
             {
                 connsql.Open();
                 string tk = txtUserName.Text;
                 string mk = txtPass.Text;
-                string sql = "select * from NguoiDung where username = '" + tk + "' and password = '" + mk + "'";
+                string sql = "select * from QuanLy where username = '" + tk + "' and password = '" + mk + "'";
                 SqlCommand cmd = new SqlCommand(sql, connsql);
                 SqlDataReader dta = cmd.ExecuteReader();
                 if (dta.Read() == true)
                 {
                     this.Hide();
-                    BatDauThi form2 = new BatDauThi();
+                    CCN form2 = new CCN();
                     form2.ShowDialog();
                 }
                 else
@@ -63,30 +60,28 @@ namespace QLTN
 
             }
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void Thoat_Click(object sender, EventArgs e)
         {
             this.Hide();
             Chonquyen cq = new Chonquyen();
             cq.ShowDialog();
         }
 
-
-        private void NguoiDung_Load(object sender, EventArgs e)
+        private void txtUserName_TextChanged(object sender, System.EventArgs e)
         {
 
         }
 
-        private void lblDangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void txtPass_TextChanged(object sender, System.EventArgs e)
         {
-            this.Hide();
-            DangKy dk = new DangKy();
-            dk.ShowDialog();
+
         }
 
-        private void lbl_DoiMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Chonquyen cq = new Chonquyen();
+            cq.ShowDialog();
         }
     }
 }
