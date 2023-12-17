@@ -59,3 +59,21 @@ C:\Users\Admin\Documents\Zalo Received Files\UngDungQuanLyTracNghiem (1)\QLTN\ob
 C:\Users\Admin\Documents\Zalo Received Files\UngDungQuanLyTracNghiem (1)\QLTN\obj\Debug\QLTN.Properties.Resources.resources
 C:\Users\Admin\Documents\Zalo Received Files\UngDungQuanLyTracNghiem (1)\QLTN\obj\Debug\QLTN.csproj.GenerateResource.Cache
 C:\Users\Admin\Documents\Zalo Received Files\UngDungQuanLyTracNghiem (1)\QLTN\obj\Debug\QLTN.SinhVien.resources
+D:\TieuLuan\UngDungQuanLyTracNghiem\UngDungQuanLyTracNghiem(Update 12-6(1))\QLTN\obj\Debug\QLTN.csproj.AssemblyReference.cache
+D:\TieuLuan\UngDungQuanLyTracNghiem\UngDungQuanLyTracNghiem(Update 12-6(1))\QLTN\obj\Debug\QLTN.csproj.SuggestedBindingRedirects.cache
+D:\TieuLuan\UngDungQuanLyTracNghiem\UngDungQuanLyTracNghiem(Update 12-6(1))\QLTN\obj\Debug\QLTN.BatDauThi.resources
+D:\TieuLuan\UngDungQuanLyTracNghiem\UngDungQuanLyTracNghiem(Update 12-6(1))\QLTN\obj\Debug\QLTN.CauHoi.resources
+D:\TieuLuan\UngDungQuanLyTracNghiem\UngDungQuanLyTracNghiem(Update 12-6(1))\QLTN\obj\Debug\QLTN.CCN.resources
+D:\TieuLuan\UngDungQuanLyTracNghiem\UngDungQuanLyTracNghiem(Update 12-6(1))\QLTN\obj\Debug\QLTN.Chonquyen.resources
+D:\TieuLuan\UngDungQuanLyTracNghiem\UngDungQuanLyTracNghiem(Update 12-6(1))\QLTN\obj\Debug\QLTN.DangKy.resources
+D:\TieuLuan\UngDungQuanLyTracNghiem\UngDungQuanLyTracNghiem(Update 12-6(1))\QLTN\obj\Debug\QLTN.NguoiDung.resources
+D:\TieuLuan\UngDungQuanLyTracNghiem\UngDungQuanLyTracNghiem(Update 12-6(1))\QLTN\obj\Debug\QLTN.QuanLy.resources
+D:\TieuLuan\UngDungQuanLyTracNghiem\UngDungQuanLyTracNghiem(Update 12-6(1))\QLTN\obj\Debug\QLTN.Properties.Resources.resources
+D:\TieuLuan\UngDungQuanLyTracNghiem\UngDungQuanLyTracNghiem(Update 12-6(1))\QLTN\obj\Debug\QLTN.SinhVien.resources
+D:\TieuLuan\UngDungQuanLyTracNghiem\UngDungQuanLyTracNghiem(Update 12-6(1))\QLTN\obj\Debug\QLTN.csproj.GenerateResource.cache
+D:\TieuLuan\UngDungQuanLyTracNghiem\UngDungQuanLyTracNghiem(Update 12-6(1))\QLTN\obj\Debug\QLTN.csproj.CoreCompileInputs.cache
+D:\TieuLuan\UngDungQuanLyTracNghiem\UngDungQuanLyTracNghiem(Update 12-6(1))\QLTN\obj\Debug\QLTN.exe
+D:\TieuLuan\UngDungQuanLyTracNghiem\UngDungQuanLyTracNghiem(Update 12-6(1))\QLTN\obj\Debug\QLTN.pdb
+D:\TieuLuan\UngDungQuanLyTracNghiem\UngDungQuanLyTracNghiem(Update 12-6(1))\QLTN\bin\Debug\QLTN.exe.config
+D:\TieuLuan\UngDungQuanLyTracNghiem\UngDungQuanLyTracNghiem(Update 12-6(1))\QLTN\bin\Debug\QLTN.exe
+D:\TieuLuan\UngDungQuanLyTracNghiem\UngDungQuanLyTracNghiem(Update 12-6(1))\QLTN\bin\Debug\QLTN.pdb

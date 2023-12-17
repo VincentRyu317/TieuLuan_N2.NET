@@ -47,7 +47,7 @@
             this.lbl_useless1 = new System.Windows.Forms.Label();
             this.lbl_Phut = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbb_DsCauHoi = new System.Windows.Forms.ComboBox();
             this.btn_Truoc = new System.Windows.Forms.Button();
             this.btn_Sau = new System.Windows.Forms.Button();
             this.btn_Nop = new System.Windows.Forms.Button();
@@ -71,7 +71,7 @@
             this.lbl_CauHoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_CauHoi.Location = new System.Drawing.Point(11, 9);
             this.lbl_CauHoi.Name = "lbl_CauHoi";
-            this.lbl_CauHoi.Size = new System.Drawing.Size(71, 22);
+            this.lbl_CauHoi.Size = new System.Drawing.Size(113, 36);
             this.lbl_CauHoi.TabIndex = 0;
             this.lbl_CauHoi.Text = "Câu hỏi";
             // 
@@ -89,7 +89,7 @@
             this.lbl_DapAn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_DapAn.Location = new System.Drawing.Point(16, 234);
             this.lbl_DapAn.Name = "lbl_DapAn";
-            this.lbl_DapAn.Size = new System.Drawing.Size(66, 22);
+            this.lbl_DapAn.Size = new System.Drawing.Size(105, 36);
             this.lbl_DapAn.TabIndex = 2;
             this.lbl_DapAn.Text = "Đáp án";
             // 
@@ -99,7 +99,7 @@
             this.rbtn_A.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtn_A.Location = new System.Drawing.Point(37, 266);
             this.rbtn_A.Name = "rbtn_A";
-            this.rbtn_A.Size = new System.Drawing.Size(45, 26);
+            this.rbtn_A.Size = new System.Drawing.Size(68, 40);
             this.rbtn_A.TabIndex = 3;
             this.rbtn_A.TabStop = true;
             this.rbtn_A.Text = "A";
@@ -111,7 +111,7 @@
             this.btn_B.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_B.Location = new System.Drawing.Point(37, 356);
             this.btn_B.Name = "btn_B";
-            this.btn_B.Size = new System.Drawing.Size(44, 26);
+            this.btn_B.Size = new System.Drawing.Size(67, 40);
             this.btn_B.TabIndex = 4;
             this.btn_B.TabStop = true;
             this.btn_B.Text = "B";
@@ -123,7 +123,7 @@
             this.rbtn_C.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtn_C.Location = new System.Drawing.Point(37, 436);
             this.rbtn_C.Name = "rbtn_C";
-            this.rbtn_C.Size = new System.Drawing.Size(44, 26);
+            this.rbtn_C.Size = new System.Drawing.Size(67, 40);
             this.rbtn_C.TabIndex = 5;
             this.rbtn_C.TabStop = true;
             this.rbtn_C.Text = "C";
@@ -135,7 +135,7 @@
             this.rbtn_D.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtn_D.Location = new System.Drawing.Point(37, 511);
             this.rbtn_D.Name = "rbtn_D";
-            this.rbtn_D.Size = new System.Drawing.Size(45, 26);
+            this.rbtn_D.Size = new System.Drawing.Size(69, 40);
             this.rbtn_D.TabIndex = 6;
             this.rbtn_D.TabStop = true;
             this.rbtn_D.Text = "D";
@@ -178,7 +178,7 @@
             this.lbl_Time.AutoSize = true;
             this.lbl_Time.Location = new System.Drawing.Point(6, 14);
             this.lbl_Time.Name = "lbl_Time";
-            this.lbl_Time.Size = new System.Drawing.Size(67, 17);
+            this.lbl_Time.Size = new System.Drawing.Size(101, 25);
             this.lbl_Time.TabIndex = 11;
             this.lbl_Time.Text = "Thời gian";
             // 
@@ -222,7 +222,7 @@
             this.lbl_Giay.ForeColor = System.Drawing.Color.Red;
             this.lbl_Giay.Location = new System.Drawing.Point(160, 39);
             this.lbl_Giay.Name = "lbl_Giay";
-            this.lbl_Giay.Size = new System.Drawing.Size(62, 47);
+            this.lbl_Giay.Size = new System.Drawing.Size(98, 75);
             this.lbl_Giay.TabIndex = 14;
             this.lbl_Giay.Text = "00";
             this.lbl_Giay.Click += new System.EventHandler(this.btn_Nop_Click);
@@ -235,7 +235,7 @@
             this.lbl_useless1.ForeColor = System.Drawing.Color.Red;
             this.lbl_useless1.Location = new System.Drawing.Point(97, 40);
             this.lbl_useless1.Name = "lbl_useless1";
-            this.lbl_useless1.Size = new System.Drawing.Size(33, 45);
+            this.lbl_useless1.Size = new System.Drawing.Size(53, 73);
             this.lbl_useless1.TabIndex = 13;
             this.lbl_useless1.Text = ":";
             // 
@@ -248,27 +248,30 @@
             this.lbl_Phut.ForeColor = System.Drawing.Color.Red;
             this.lbl_Phut.Location = new System.Drawing.Point(11, 39);
             this.lbl_Phut.Name = "lbl_Phut";
-            this.lbl_Phut.Size = new System.Drawing.Size(62, 47);
+            this.lbl_Phut.Size = new System.Drawing.Size(98, 75);
             this.lbl_Phut.TabIndex = 12;
             this.lbl_Phut.Text = "00";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbb_DsCauHoi);
             this.groupBox1.Location = new System.Drawing.Point(850, 146);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(290, 255);
+            this.groupBox1.Size = new System.Drawing.Size(290, 454);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Câu: ";
             // 
-            // comboBox1
+            // cbb_DsCauHoi
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(33, 40);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 24);
-            this.comboBox1.TabIndex = 0;
+            this.cbb_DsCauHoi.Font = new System.Drawing.Font("Times New Roman", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbb_DsCauHoi.FormattingEnabled = true;
+            this.cbb_DsCauHoi.Location = new System.Drawing.Point(33, 40);
+            this.cbb_DsCauHoi.Name = "cbb_DsCauHoi";
+            this.cbb_DsCauHoi.Size = new System.Drawing.Size(211, 50);
+            this.cbb_DsCauHoi.TabIndex = 0;
+            this.cbb_DsCauHoi.SelectedIndexChanged += new System.EventHandler(this.cbb_DsCauHoi_SelectedIndexChanged);
+            this.cbb_DsCauHoi.Click += new System.EventHandler(this.cbb_DsCauHoi_SelectedIndexChanged);
             // 
             // btn_Truoc
             // 
@@ -321,7 +324,7 @@
             this.lbl_MSSV.Font = new System.Drawing.Font("Times New Roman", 19.875F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_MSSV.Location = new System.Drawing.Point(47, 101);
             this.lbl_MSSV.Name = "lbl_MSSV";
-            this.lbl_MSSV.Size = new System.Drawing.Size(44, 40);
+            this.lbl_MSSV.Size = new System.Drawing.Size(66, 61);
             this.lbl_MSSV.TabIndex = 4;
             this.lbl_MSSV.Text = "...";
             this.lbl_MSSV.Click += new System.EventHandler(this.lbl_MSSV_Click);
@@ -330,9 +333,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 54);
+            this.label2.Location = new System.Drawing.Point(6, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 23);
+            this.label2.Size = new System.Drawing.Size(113, 36);
             this.label2.TabIndex = 1;
             this.label2.Text = "MSSV:";
             // 
@@ -352,7 +355,7 @@
             this.lbl_ThongBao.Font = new System.Drawing.Font("Times New Roman", 19.875F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ThongBao.Location = new System.Drawing.Point(47, 51);
             this.lbl_ThongBao.Name = "lbl_ThongBao";
-            this.lbl_ThongBao.Size = new System.Drawing.Size(44, 40);
+            this.lbl_ThongBao.Size = new System.Drawing.Size(66, 61);
             this.lbl_ThongBao.TabIndex = 6;
             this.lbl_ThongBao.Text = "...";
             // 
@@ -364,7 +367,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(850, 431);
+            this.button1.Location = new System.Drawing.Point(1161, 617);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(251, 68);
             this.button1.TabIndex = 20;
@@ -374,7 +377,7 @@
             // 
             // BatDauThi
             // 
-            this.ClientSize = new System.Drawing.Size(1439, 694);
+            this.ClientSize = new System.Drawing.Size(1496, 769);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Gr_ThongBao);
             this.Controls.Add(this.Gr_ThongTin);
@@ -425,7 +428,7 @@
         private System.Windows.Forms.GroupBox Gr_ThongTin;
         private System.Windows.Forms.GroupBox Gr_ThongBao;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbb_DsCauHoi;
         private System.Windows.Forms.Label lbl_MSSV;
         private System.Windows.Forms.Label lbl_ThongBao;
         private System.Windows.Forms.Label lbl_Phut;

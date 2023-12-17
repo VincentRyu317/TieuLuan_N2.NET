@@ -41,5 +41,9 @@ namespace QLTN
             }
         }
 
+        private void Chonquyen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -45,10 +45,10 @@
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label4.ForeColor = System.Drawing.Color.Black;
-            label4.Location = new System.Drawing.Point(191, 75);
-            label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label4.Location = new System.Drawing.Point(286, 117);
+            label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(208, 26);
+            label4.Size = new System.Drawing.Size(325, 42);
             label4.TabIndex = 32;
             label4.Text = "Chào Mừng Admin";
             // 
@@ -57,10 +57,10 @@
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label3.ForeColor = System.Drawing.Color.Black;
-            label3.Location = new System.Drawing.Point(39, 236);
-            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label3.Location = new System.Drawing.Point(58, 369);
+            label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(130, 26);
+            label3.Size = new System.Drawing.Size(200, 42);
             label3.TabIndex = 30;
             label3.Text = "PassWorld:";
             // 
@@ -69,10 +69,10 @@
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label2.ForeColor = System.Drawing.Color.Black;
-            label2.Location = new System.Drawing.Point(39, 172);
-            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label2.Location = new System.Drawing.Point(58, 269);
+            label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(133, 26);
+            label2.Size = new System.Drawing.Size(202, 42);
             label2.TabIndex = 31;
             label2.Text = "User Name:";
             // 
@@ -80,11 +80,11 @@
             // 
             this.txtPass.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.ForeColor = System.Drawing.Color.Black;
-            this.txtPass.Location = new System.Drawing.Point(208, 236);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPass.Location = new System.Drawing.Point(312, 369);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(278, 34);
+            this.txtPass.Size = new System.Drawing.Size(415, 50);
             this.txtPass.TabIndex = 27;
             this.txtPass.Text = "1234";
             this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
@@ -93,10 +93,10 @@
             // 
             this.txtUserName.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.ForeColor = System.Drawing.Color.Black;
-            this.txtUserName.Location = new System.Drawing.Point(208, 172);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUserName.Location = new System.Drawing.Point(312, 269);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(278, 34);
+            this.txtUserName.Size = new System.Drawing.Size(415, 50);
             this.txtUserName.TabIndex = 26;
             this.txtUserName.Text = "admin1";
             this.txtUserName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
@@ -106,10 +106,10 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Default;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(166, 389);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(249, 608);
+            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(265, 47);
+            this.button2.Size = new System.Drawing.Size(398, 73);
             this.button2.TabIndex = 29;
             this.button2.Text = "Quay Về Trang Chọn";
             this.button2.UseVisualStyleBackColor = true;
@@ -120,10 +120,10 @@
             this.btnDangNhap.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnDangNhap.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.Black;
-            this.btnDangNhap.Location = new System.Drawing.Point(166, 309);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDangNhap.Location = new System.Drawing.Point(249, 483);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(265, 47);
+            this.btnDangNhap.Size = new System.Drawing.Size(398, 73);
             this.btnDangNhap.TabIndex = 28;
             this.btnDangNhap.Text = "Đăng Nhập ";
             this.btnDangNhap.UseVisualStyleBackColor = true;
@@ -132,9 +132,9 @@
             // 
             // QuanLy
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 521);
+            this.ClientSize = new System.Drawing.Size(873, 814);
             this.Controls.Add(label4);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUserName);
@@ -142,8 +142,10 @@
             this.Controls.Add(label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnDangNhap);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "QuanLy";
             this.Text = "admin";
+            this.Load += new System.EventHandler(this.QuanLy_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -22,7 +22,7 @@ namespace QLTN
         }
         class Connect
         {
-            private static string connectstring = @"Data Source=LAPTOP-AD9OSNGE\SQLEXPRESS;Initial Catalog=QLTN;Integrated Security=True";
+            private static string connectstring = @"Data Source=LAPTOP-H34EM8I7\SQLEXPRESS;Initial Catalog=QLTN;Integrated Security=True";
             public SqlConnection connect;
             public Connect()
             {
@@ -102,6 +102,11 @@ namespace QLTN
             this.Hide();
             NguoiDung DN = new NguoiDung();
             DN.ShowDialog();
+        }
+
+        private void DangKy_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

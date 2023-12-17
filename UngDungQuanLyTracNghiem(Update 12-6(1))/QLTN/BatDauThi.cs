@@ -23,7 +23,7 @@ namespace QLTN
 
         class Connect
         {
-            private static string connectstring = @"Data Source=LAPTOP-AD9OSNGE\SQLEXPRESS;Initial Catalog=QLTN;Integrated Security=True";
+            private static string connectstring = @"Data Source=LAPTOP-H34EM8I7\SQLEXPRESS;Initial Catalog=QLTN;Integrated Security=True";
             public SqlConnection connect;
             public Connect()
             {
@@ -202,6 +202,16 @@ namespace QLTN
             DialogResult result = MessageBox.Show("Bạn có muốn nộp bài  không?", "Xác nhận", MessageBoxButtons.YesNo);
             {
                 this.Close();
+            }
+        }
+
+        private void cbb_DsCauHoi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbb_DsCauHoi.Items.Clear();
+            string[] dt = { "Đã trả lời", "Chưa trả lời", "Tất cả câu" };
+            foreach (string s in dt)
+            {
+                cbb_DsCauHoi.Items.Add(s);
             }
         }
     }
