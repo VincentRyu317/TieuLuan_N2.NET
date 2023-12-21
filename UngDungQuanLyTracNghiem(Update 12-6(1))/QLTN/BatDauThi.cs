@@ -9,36 +9,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace QLTN
 {
     public partial class BatDauThi : Form
     {
+
+
+        //Tạo biến thứ tự câu hỏi
+        int Thutu = 1;
+
         public BatDauThi(string tk)
         {
             InitializeComponent();
-            connsql = kn.connect;
             StartPosition = FormStartPosition.CenterScreen;
             lbl_MSSV.Text = tk;
         }
 
-        class Connect
-        {
-            private static string connectstring = @"Data Source=LAPTOP-H34EM8I7\SQLEXPRESS;Initial Catalog=QLTN;Integrated Security=True";
-            public SqlConnection connect;
-            public Connect()
-            {
-
-                connect = new SqlConnection(connectstring);
-            }
-            public Connect(string strcm)
-            {
-                connect = new SqlConnection(strcm);
-            }
-        }
-        Connect kn = new Connect();
-        SqlConnection connsql;
-
-        int i = 1;
         private void BatDauThi_Load(object sender, EventArgs e)
         {
            
@@ -46,7 +33,7 @@ namespace QLTN
             Phut = 60;
             timer1.Start();
             //Load câu 1:
-            CauHoi(i);
+            CauHoi(Thutu);
             
         }
         private int _phut;
@@ -116,7 +103,7 @@ namespace QLTN
         //Load câu hỏi
         private void CauHoi(int i)
         {
-            connsql.Open();
+            SqlConnection connsql = Connect.Instance.GetConnection(); 
             string sql = "SELECT * from cauhoi WHERE ID = " + i;
             SqlCommand cmd = new SqlCommand(sql, connsql);
             SqlDataReader dta = cmd.ExecuteReader();
@@ -133,8 +120,9 @@ namespace QLTN
                 txt_B.Text = CauB;
                 txt_C.Text = CauC;
                 txt_D.Text = CauD;
+                dta.Close();
             }
-            connsql.Close();
+            Connect.Instance.CloseConnection();
         }
         private void btn_Nop_Click(object sender, EventArgs e)
         {
@@ -150,14 +138,14 @@ namespace QLTN
                 txt_B.Clear();
                 txt_C.Clear();
                 txt_D.Clear();
-                if(i <= 1)
+                if(Thutu <= 1)
                 {
                     MessageBox.Show("Đây là câu đầu tiên");
                 }
                 else
                 {
-                    i--;
-                    CauHoi(i);
+                    Thutu--;
+                    CauHoi(Thutu);
                 }
             }
             catch
@@ -173,14 +161,14 @@ namespace QLTN
                 txt_B.Clear();
                 txt_C.Clear();
                 txt_D.Clear();
-                if (i > 40)
+                if (Thutu > 40)
                 {
                     MessageBox.Show("Đây là câu cuối cùng");
                 }
                 else
                 {
-                    i++;
-                    CauHoi(i);
+                    Thutu++;
+                    CauHoi(Thutu);
                 }
             }
             catch
@@ -213,6 +201,11 @@ namespace QLTN
             {
                 cbb_DsCauHoi.Items.Add(s);
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
     //

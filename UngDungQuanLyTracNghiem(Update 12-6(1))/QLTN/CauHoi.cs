@@ -8,32 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+
 namespace QLTN
 {
+    
     public partial class CauHoi : Form
     {
         public CauHoi()
         {
             InitializeComponent();
-            connsql = kn.connect;
             StartPosition = FormStartPosition.CenterScreen;
         }
-        class Connect
-        {
-            private static string connectstring = @"Data Source=LAPTOP-H34EM8I7\SQLEXPRESS;Initial Catalog=QLTN;Integrated Security=True";
-            public SqlConnection connect;
-            public Connect()
-            {
-
-                connect = new SqlConnection(connectstring);
-            }
-            public Connect(string strcm)
-            {
-                connect = new SqlConnection(strcm);
-            }
-        }
-        Connect kn = new Connect();
-        SqlConnection connsql;
         private void btnThem_Click(object sender, EventArgs e)
         {
             string ID = txtID.Text;
@@ -45,11 +30,12 @@ namespace QLTN
             string DA = txtDapandung.Text;
             // Check if the username or D is already in use
             string sql = "SELECT COUNT(*) FROM cauhoi WHERE ID = @id";
+            SqlConnection connsql = Connect.Instance.GetConnection();
+
             SqlCommand cmd = new SqlCommand(sql, connsql);
             cmd.Parameters.AddWithValue("@id", ID);
-            connsql.Open();
             int count = (int)cmd.ExecuteScalar();
-            connsql.Close();
+            
 
             if (count > 0)
             {
@@ -73,7 +59,7 @@ namespace QLTN
             cmd.Parameters.AddWithValue("@cauD", D);
             cmd.Parameters.AddWithValue("@DapAn", DA);
 
-            connsql.Open();
+            Connect.Instance.GetConnection();
             cmd.ExecuteNonQuery();
             dataGridView1.Rows.Add(txtID.Text, txtCauhoi.Text, txtCauA.Text, txtCauB.Text, txtCauC.Text, txtCauD.Text, txtDapandung.Text);
             txtID.Clear();
@@ -83,7 +69,7 @@ namespace QLTN
             txtCauC.Clear();
             txtCauD.Clear();
             txtDapandung.Clear();
-            connsql.Close();
+            Connect.Instance.CloseConnection();
             MessageBox.Show("Đăng ký thành công!", "Thông báo", MessageBoxButtons.OK);
         }
 
@@ -94,7 +80,7 @@ namespace QLTN
         private void loadData()
         {
             // Connect to the database
-            connsql.Open();
+            SqlConnection connsql = Connect.Instance.GetConnection();
             string sql = "SELECT * FROM cauhoi";
             SqlCommand cmd = new SqlCommand(sql, connsql);
 
@@ -108,7 +94,7 @@ namespace QLTN
             }
 
             // Close the database connection and data reader
-            connsql.Close();
+            Connect.Instance.CloseConnection();
             reader.Close();
         }
         private void txtCauhoi_TextChanged(object sender, EventArgs e)
@@ -167,12 +153,13 @@ namespace QLTN
                 string id = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
 
                 string sql = "DELETE FROM cauhoi WHERE ID = @id";
+                SqlConnection connsql = Connect.Instance.GetConnection();
                 SqlCommand cmd = new SqlCommand(sql, connsql);
                 cmd.Parameters.AddWithValue("@id", id);
 
-                connsql.Open();
+                Connect.Instance.GetConnection();
                 cmd.ExecuteNonQuery();
-                connsql.Close();
+                Connect.Instance.CloseConnection();
 
                 dataGridView1.Rows.Remove(dataGridView1.SelectedRows[0]);
 

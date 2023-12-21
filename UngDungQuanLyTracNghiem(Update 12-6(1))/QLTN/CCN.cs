@@ -8,31 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+
 namespace QLTN
 {
     public partial class CCN : Form
     {
+
         public CCN()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
         }
-        class Connect
-        {
-            private static string connectstring = @"Data Source=LAPTOP-H34EM8I7\SQLEXPRESS;Initial Catalog=QLTN;Integrated Security=True";
-            public SqlConnection connect;
-            public Connect()
-            {
-
-                connect = new SqlConnection(connectstring);
-            }
-            public Connect(string strcm)
-            {
-                connect = new SqlConnection(strcm);
-            }
-        }
-        Connect kn = new Connect();
-        SqlConnection connsql;
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();

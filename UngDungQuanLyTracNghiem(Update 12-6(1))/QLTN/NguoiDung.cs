@@ -15,25 +15,10 @@ namespace QLTN
         public NguoiDung()
         {
             InitializeComponent();
-            connsql = kn.connect;
             StartPosition = FormStartPosition.CenterScreen;
-        }
-        class Connect
-        {
-            private static string connectstring = @"Data Source=LAPTOP-H34EM8I7\SQLEXPRESS;Initial Catalog=QLTN;Integrated Security=True";
-            public SqlConnection connect;
-            public Connect()
-            {
 
-                connect = new SqlConnection(connectstring);
-            }
-            public Connect(string strcm)
-            {
-                connect = new SqlConnection(strcm);
-            }
         }
-        Connect kn = new Connect();
-        SqlConnection connsql;
+
 
         public static object Rows { get; internal set; }
 
@@ -41,7 +26,7 @@ namespace QLTN
         {
             try
             {
-                connsql.Open();
+                SqlConnection connsql = Connect.Instance.GetConnection();
                 string tk = txtUserName.Text;
                 string mk = txtPass.Text;
                 string sql = "select * from NguoiDung where username = '" + tk + "' and password = '" + mk + "'";
@@ -49,6 +34,7 @@ namespace QLTN
                 SqlDataReader dta = cmd.ExecuteReader();
                 if (dta.Read() == true)
                 {
+                    dta.Close();
                     this.Hide();
                     BatDauThi form2 = new BatDauThi(tk);
                     form2.ShowDialog();

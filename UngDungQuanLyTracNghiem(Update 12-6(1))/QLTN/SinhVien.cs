@@ -12,28 +12,14 @@ namespace QLTN
 {
     public partial class SinhVien : Form
     {
+        //Tạo kết nối sql:
+        SqlConnection connsql = Connect.Instance.GetConnection();
         public SinhVien()
         {
             InitializeComponent();
-            connsql = kn.connect;
             StartPosition = FormStartPosition.CenterScreen;
         }
-        class Connect
-        {
-            private static string connectstring = @"Data Source=LAPTOP-H34EM8I7\SQLEXPRESS;Initial Catalog=QLTN;Integrated Security=True";
-            public SqlConnection connect;
-            public Connect()
-            {
-
-                connect = new SqlConnection(connectstring);
-            }
-            public Connect(string strcm)
-            {
-                connect = new SqlConnection(strcm);
-            }
-        }
-        Connect kn = new Connect();
-        SqlConnection connsql;
+       
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -46,7 +32,7 @@ namespace QLTN
         private void loadData()
         {
             // Connect to the database
-            connsql.Open();
+            Connect.Instance.GetConnection();
             string sql = "SELECT * FROM NguoiDung";
             SqlCommand cmd = new SqlCommand(sql, connsql);
 
@@ -60,7 +46,7 @@ namespace QLTN
             }
 
             // Close the database connection and data reader
-            connsql.Close();
+            Connect.Instance.CloseConnection();
             reader.Close();
         }
         private void btnThem_Click(object sender, EventArgs e)
@@ -73,9 +59,9 @@ namespace QLTN
             string sql = "SELECT COUNT(*) FROM NguoiDung WHERE username = @tk";
             SqlCommand cmd = new SqlCommand(sql, connsql);
             cmd.Parameters.AddWithValue("@tk", tk);
-            connsql.Open();
+            Connect.Instance.GetConnection();
             int count = (int)cmd.ExecuteScalar();
-            connsql.Close();
+            Connect.Instance.CloseConnection();
 
             if (count > 0)
             {
@@ -96,14 +82,14 @@ namespace QLTN
             cmd.Parameters.AddWithValue("@hoten", hoten);
             cmd.Parameters.AddWithValue("@email", email);
 
-            connsql.Open();
+            Connect.Instance.GetConnection();
             cmd.ExecuteNonQuery();
             dataGridView1.Rows.Add(txtCauA.Text, txtCauB.Text, txtCauC.Text, txtCauD.Text);
             txtCauA.Clear();
             txtCauB.Clear();
             txtCauC.Clear();
             txtCauD.Clear();
-            connsql.Close();
+            Connect.Instance.CloseConnection();
             MessageBox.Show("Đăng ký thành công!", "Thông báo", MessageBoxButtons.OK);
         }
 
@@ -137,9 +123,9 @@ namespace QLTN
                 SqlCommand cmd = new SqlCommand(sql, connsql);
                 cmd.Parameters.AddWithValue("@tk", tk);
 
-                connsql.Open();
+                Connect.Instance.GetConnection();
                 cmd.ExecuteNonQuery();
-                connsql.Close();
+                Connect.Instance.CloseConnection();
 
                 dataGridView1.Rows.Remove(dataGridView1.SelectedRows[0]);
 

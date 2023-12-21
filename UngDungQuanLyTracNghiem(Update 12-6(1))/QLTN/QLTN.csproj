@@ -69,6 +69,7 @@
     <Compile Include="Chonquyen.Designer.cs">
       <DependentUpon>Chonquyen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Connect.cs" />
     <Compile Include="DangKy.cs">
       <SubType>Form</SubType>
     </Compile>

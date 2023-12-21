@@ -12,40 +12,27 @@ namespace QLTN
 {
     public partial class QuanLy : Form
     {
+       
         public QuanLy()
         {
             InitializeComponent();
-            connsql = kn.connect;
             StartPosition = FormStartPosition.CenterScreen;
         }
-        class Connect
-        {
-            private static string connectstring = @"Data Source=LAPTOP-H34EM8I7\SQLEXPRESS;Initial Catalog=QLTN;Integrated Security=True";
-            public SqlConnection connect;
-            public Connect()
-            {
-
-                connect = new SqlConnection(connectstring);
-            }
-            public Connect(string strcm)
-            {
-                connect = new SqlConnection(strcm);
-            }
-        }
-        Connect kn = new Connect();
-        SqlConnection connsql;
+        
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             try
             {
-                connsql.Open();
+                SqlConnection connsql = Connect.Instance.GetConnection();
                 string tk = txtUserName.Text;
                 string mk = txtPass.Text;
                 string sql = "select * from QuanLy where username = '" + tk + "' and password = '" + mk + "'";
                 SqlCommand cmd = new SqlCommand(sql, connsql);
+
                 SqlDataReader dta = cmd.ExecuteReader();
                 if (dta.Read() == true)
                 {
+                    dta.Close();
                     this.Hide();
                     CCN form2 = new CCN();
                     form2.ShowDialog();
@@ -59,6 +46,8 @@ namespace QLTN
             {
 
             }
+                        Connect.Instance.CloseConnection();
+
         }
         private void Thoat_Click(object sender, EventArgs e)
         {

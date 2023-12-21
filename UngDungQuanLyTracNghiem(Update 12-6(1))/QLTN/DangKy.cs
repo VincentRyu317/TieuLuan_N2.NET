@@ -14,28 +14,14 @@ namespace QLTN
 {
     public partial class DangKy : Form
     {
+        //Tạo kết nối sql:
+        SqlConnection connsql = Connect.Instance.GetConnection();
         public DangKy()
         {
             InitializeComponent();
-            connsql = kn.connect;
             StartPosition = FormStartPosition.CenterScreen;
         }
-        class Connect
-        {
-            private static string connectstring = @"Data Source=LAPTOP-H34EM8I7\SQLEXPRESS;Initial Catalog=QLTN;Integrated Security=True";
-            public SqlConnection connect;
-            public Connect()
-            {
-
-                connect = new SqlConnection(connectstring);
-            }
-            public Connect(string strcm)
-            {
-                connect = new SqlConnection(strcm);
-            }
-        }
-        Connect kn = new Connect();
-        SqlConnection connsql;
+        
         private void btnDangKy_Click(object sender, EventArgs e)
         {
             string tk = txtentaikhoan.Text;
@@ -46,14 +32,14 @@ namespace QLTN
 
             // Check if the username or email is already in use
             string sql = "SELECT COUNT(*) FROM NguoiDung WHERE username = @username OR email = @email";
+
             SqlCommand cmd = new SqlCommand(sql, connsql);
             cmd.Parameters.AddWithValue("@username", tk);
             cmd.Parameters.AddWithValue("@email", email);
 
-            connsql.Open();
+            Connect.Instance.GetConnection();
             int count = (int)cmd.ExecuteScalar();
-            connsql.Close();
-
+            Connect.Instance.CloseConnection();
             if (count > 0)
             {
                 if (count == 1)
@@ -90,9 +76,9 @@ namespace QLTN
             cmd.Parameters.AddWithValue("@HoTen", ht);
             cmd.Parameters.AddWithValue("@email", email);
 
-            connsql.Open();
+            Connect.Instance.GetConnection();
             cmd.ExecuteNonQuery();
-            connsql.Close();
+            Connect.Instance.CloseConnection();
 
             MessageBox.Show("Đăng ký thành công!", "Thông báo", MessageBoxButtons.OK);
         }
