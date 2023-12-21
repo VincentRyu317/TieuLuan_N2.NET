@@ -32,16 +32,17 @@
             this.lbl_CauHoi = new System.Windows.Forms.Label();
             this.txt_CauHoi = new System.Windows.Forms.TextBox();
             this.lbl_DapAn = new System.Windows.Forms.Label();
-            this.btn_A = new System.Windows.Forms.RadioButton();
-            this.btn_B = new System.Windows.Forms.RadioButton();
-            this.btn_C = new System.Windows.Forms.RadioButton();
-            this.btn_D = new System.Windows.Forms.RadioButton();
+            this.rbtn_A = new System.Windows.Forms.RadioButton();
+            this.rbtn_B = new System.Windows.Forms.RadioButton();
+            this.rbtn_C = new System.Windows.Forms.RadioButton();
+            this.rbtn_D = new System.Windows.Forms.RadioButton();
             this.txt_A = new System.Windows.Forms.TextBox();
             this.txt_B = new System.Windows.Forms.TextBox();
             this.txt_C = new System.Windows.Forms.TextBox();
             this.txt_D = new System.Windows.Forms.TextBox();
             this.lbl_Time = new System.Windows.Forms.Label();
             this.Gr_Đề = new System.Windows.Forms.GroupBox();
+            this.lbl_ID = new System.Windows.Forms.Label();
             this.Gr_Time = new System.Windows.Forms.GroupBox();
             this.lbl_Giay = new System.Windows.Forms.Label();
             this.lbl_useless1 = new System.Windows.Forms.Label();
@@ -58,11 +59,13 @@
             this.lbl_ThongBao = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
+            this.gr_DapAn = new System.Windows.Forms.GroupBox();
             this.Gr_Đề.SuspendLayout();
             this.Gr_Time.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.Gr_ThongTin.SuspendLayout();
             this.Gr_ThongBao.SuspendLayout();
+            this.gr_DapAn.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_CauHoi
@@ -93,57 +96,61 @@
             this.lbl_DapAn.TabIndex = 2;
             this.lbl_DapAn.Text = "Đáp án";
             // 
-            // btn_A
+            // rbtn_A
             // 
-            this.btn_A.AutoSize = true;
-            this.btn_A.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_A.Location = new System.Drawing.Point(37, 266);
-            this.btn_A.Name = "btn_A";
-            this.btn_A.Size = new System.Drawing.Size(68, 40);
-            this.btn_A.TabIndex = 3;
-            this.btn_A.TabStop = true;
-            this.btn_A.Text = "A";
-            this.btn_A.UseVisualStyleBackColor = true;
+            this.rbtn_A.AutoSize = true;
+            this.rbtn_A.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtn_A.Location = new System.Drawing.Point(6, 44);
+            this.rbtn_A.Name = "rbtn_A";
+            this.rbtn_A.Size = new System.Drawing.Size(68, 40);
+            this.rbtn_A.TabIndex = 3;
+            this.rbtn_A.TabStop = true;
+            this.rbtn_A.Text = "A";
+            this.rbtn_A.UseVisualStyleBackColor = true;
+            this.rbtn_A.CheckedChanged += new System.EventHandler(this.rbtn_A_CheckedChanged);
             // 
-            // btn_B
+            // rbtn_B
             // 
-            this.btn_B.AutoSize = true;
-            this.btn_B.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_B.Location = new System.Drawing.Point(37, 356);
-            this.btn_B.Name = "btn_B";
-            this.btn_B.Size = new System.Drawing.Size(67, 40);
-            this.btn_B.TabIndex = 4;
-            this.btn_B.TabStop = true;
-            this.btn_B.Text = "B";
-            this.btn_B.UseVisualStyleBackColor = true;
+            this.rbtn_B.AutoSize = true;
+            this.rbtn_B.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtn_B.Location = new System.Drawing.Point(6, 134);
+            this.rbtn_B.Name = "rbtn_B";
+            this.rbtn_B.Size = new System.Drawing.Size(67, 40);
+            this.rbtn_B.TabIndex = 4;
+            this.rbtn_B.TabStop = true;
+            this.rbtn_B.Text = "B";
+            this.rbtn_B.UseVisualStyleBackColor = true;
+            this.rbtn_B.CheckedChanged += new System.EventHandler(this.rbtn_B_CheckedChanged);
             // 
-            // btn_C
+            // rbtn_C
             // 
-            this.btn_C.AutoSize = true;
-            this.btn_C.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_C.Location = new System.Drawing.Point(37, 436);
-            this.btn_C.Name = "btn_C";
-            this.btn_C.Size = new System.Drawing.Size(67, 40);
-            this.btn_C.TabIndex = 5;
-            this.btn_C.TabStop = true;
-            this.btn_C.Text = "C";
-            this.btn_C.UseVisualStyleBackColor = true;
+            this.rbtn_C.AutoSize = true;
+            this.rbtn_C.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtn_C.Location = new System.Drawing.Point(6, 214);
+            this.rbtn_C.Name = "rbtn_C";
+            this.rbtn_C.Size = new System.Drawing.Size(67, 40);
+            this.rbtn_C.TabIndex = 5;
+            this.rbtn_C.TabStop = true;
+            this.rbtn_C.Text = "C";
+            this.rbtn_C.UseVisualStyleBackColor = true;
+            this.rbtn_C.CheckedChanged += new System.EventHandler(this.rbtn_C_CheckedChanged);
             // 
-            // btn_D
+            // rbtn_D
             // 
-            this.btn_D.AutoSize = true;
-            this.btn_D.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_D.Location = new System.Drawing.Point(37, 511);
-            this.btn_D.Name = "btn_D";
-            this.btn_D.Size = new System.Drawing.Size(69, 40);
-            this.btn_D.TabIndex = 6;
-            this.btn_D.TabStop = true;
-            this.btn_D.Text = "D";
-            this.btn_D.UseVisualStyleBackColor = true;
+            this.rbtn_D.AutoSize = true;
+            this.rbtn_D.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtn_D.Location = new System.Drawing.Point(6, 289);
+            this.rbtn_D.Name = "rbtn_D";
+            this.rbtn_D.Size = new System.Drawing.Size(69, 40);
+            this.rbtn_D.TabIndex = 6;
+            this.rbtn_D.TabStop = true;
+            this.rbtn_D.Text = "D";
+            this.rbtn_D.UseVisualStyleBackColor = true;
+            this.rbtn_D.CheckedChanged += new System.EventHandler(this.rbtn_D_CheckedChanged);
             // 
             // txt_A
             // 
-            this.txt_A.Location = new System.Drawing.Point(103, 266);
+            this.txt_A.Location = new System.Drawing.Point(72, 44);
             this.txt_A.Multiline = true;
             this.txt_A.Name = "txt_A";
             this.txt_A.Size = new System.Drawing.Size(635, 46);
@@ -151,7 +158,7 @@
             // 
             // txt_B
             // 
-            this.txt_B.Location = new System.Drawing.Point(106, 344);
+            this.txt_B.Location = new System.Drawing.Point(75, 122);
             this.txt_B.Multiline = true;
             this.txt_B.Name = "txt_B";
             this.txt_B.Size = new System.Drawing.Size(634, 48);
@@ -159,7 +166,7 @@
             // 
             // txt_C
             // 
-            this.txt_C.Location = new System.Drawing.Point(108, 422);
+            this.txt_C.Location = new System.Drawing.Point(77, 200);
             this.txt_C.Multiline = true;
             this.txt_C.Name = "txt_C";
             this.txt_C.Size = new System.Drawing.Size(633, 40);
@@ -167,7 +174,7 @@
             // 
             // txt_D
             // 
-            this.txt_D.Location = new System.Drawing.Point(106, 514);
+            this.txt_D.Location = new System.Drawing.Point(75, 292);
             this.txt_D.Multiline = true;
             this.txt_D.Name = "txt_D";
             this.txt_D.Size = new System.Drawing.Size(632, 45);
@@ -184,14 +191,7 @@
             // 
             // Gr_Đề
             // 
-            this.Gr_Đề.Controls.Add(this.txt_D);
-            this.Gr_Đề.Controls.Add(this.txt_C);
-            this.Gr_Đề.Controls.Add(this.txt_B);
-            this.Gr_Đề.Controls.Add(this.txt_A);
-            this.Gr_Đề.Controls.Add(this.btn_D);
-            this.Gr_Đề.Controls.Add(this.btn_C);
-            this.Gr_Đề.Controls.Add(this.btn_B);
-            this.Gr_Đề.Controls.Add(this.btn_A);
+            this.Gr_Đề.Controls.Add(this.lbl_ID);
             this.Gr_Đề.Controls.Add(this.lbl_DapAn);
             this.Gr_Đề.Controls.Add(this.txt_CauHoi);
             this.Gr_Đề.Controls.Add(this.lbl_CauHoi);
@@ -200,6 +200,16 @@
             this.Gr_Đề.Size = new System.Drawing.Size(778, 591);
             this.Gr_Đề.TabIndex = 12;
             this.Gr_Đề.TabStop = false;
+            // 
+            // lbl_ID
+            // 
+            this.lbl_ID.AutoSize = true;
+            this.lbl_ID.Font = new System.Drawing.Font("Times New Roman", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ID.Location = new System.Drawing.Point(117, 6);
+            this.lbl_ID.Name = "lbl_ID";
+            this.lbl_ID.Size = new System.Drawing.Size(174, 61);
+            this.lbl_ID.TabIndex = 11;
+            this.lbl_ID.Text = "Số câu";
             // 
             // Gr_Time
             // 
@@ -225,6 +235,7 @@
             this.lbl_Giay.Size = new System.Drawing.Size(98, 75);
             this.lbl_Giay.TabIndex = 14;
             this.lbl_Giay.Text = "00";
+            this.lbl_Giay.Click += new System.EventHandler(this.btn_Nop_Click);
             // 
             // lbl_useless1
             // 
@@ -373,9 +384,26 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.nopbai_Click);
             // 
+            // gr_DapAn
+            // 
+            this.gr_DapAn.Controls.Add(this.rbtn_A);
+            this.gr_DapAn.Controls.Add(this.rbtn_B);
+            this.gr_DapAn.Controls.Add(this.txt_D);
+            this.gr_DapAn.Controls.Add(this.rbtn_C);
+            this.gr_DapAn.Controls.Add(this.txt_C);
+            this.gr_DapAn.Controls.Add(this.rbtn_D);
+            this.gr_DapAn.Controls.Add(this.txt_B);
+            this.gr_DapAn.Controls.Add(this.txt_A);
+            this.gr_DapAn.Location = new System.Drawing.Point(12, 231);
+            this.gr_DapAn.Name = "gr_DapAn";
+            this.gr_DapAn.Size = new System.Drawing.Size(744, 348);
+            this.gr_DapAn.TabIndex = 21;
+            this.gr_DapAn.TabStop = false;
+            // 
             // BatDauThi
             // 
             this.ClientSize = new System.Drawing.Size(1496, 769);
+            this.Controls.Add(this.gr_DapAn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Gr_ThongBao);
             this.Controls.Add(this.Gr_ThongTin);
@@ -396,6 +424,8 @@
             this.Gr_ThongTin.PerformLayout();
             this.Gr_ThongBao.ResumeLayout(false);
             this.Gr_ThongBao.PerformLayout();
+            this.gr_DapAn.ResumeLayout(false);
+            this.gr_DapAn.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -406,10 +436,10 @@
         private System.Windows.Forms.Label lbl_CauHoi;
         private System.Windows.Forms.TextBox txt_CauHoi;
         private System.Windows.Forms.Label lbl_DapAn;
-        private System.Windows.Forms.RadioButton btn_A;
-        private System.Windows.Forms.RadioButton btn_B;
-        private System.Windows.Forms.RadioButton btn_C;
-        private System.Windows.Forms.RadioButton btn_D;
+        private System.Windows.Forms.RadioButton rbtn_A;
+        private System.Windows.Forms.RadioButton rbtn_B;
+        private System.Windows.Forms.RadioButton rbtn_C;
+        private System.Windows.Forms.RadioButton rbtn_D;
         private System.Windows.Forms.TextBox txt_A;
         private System.Windows.Forms.TextBox txt_B;
         private System.Windows.Forms.TextBox txt_C;
@@ -432,5 +462,7 @@
         private System.Windows.Forms.Label lbl_Phut;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbl_ID;
+        private System.Windows.Forms.GroupBox gr_DapAn;
     }
 }

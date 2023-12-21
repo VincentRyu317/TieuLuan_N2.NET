@@ -9,13 +9,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace QLTN
 {
     public partial class BatDauThi : Form
     {
-
-
         //Tạo biến thứ tự câu hỏi
         int Thutu = 1;
 
@@ -28,13 +27,14 @@ namespace QLTN
 
         private void BatDauThi_Load(object sender, EventArgs e)
         {
-           
+
             //Đồng hồ
             Phut = 60;
             timer1.Start();
             //Load câu 1:
             CauHoi(Thutu);
-            
+            ReadOnly();
+
         }
         private int _phut;
 
@@ -103,7 +103,7 @@ namespace QLTN
         //Load câu hỏi
         private void CauHoi(int i)
         {
-            SqlConnection connsql = Connect.Instance.GetConnection(); 
+            SqlConnection connsql = Connect.Instance.GetConnection();
             string sql = "SELECT * from cauhoi WHERE ID = " + i;
             SqlCommand cmd = new SqlCommand(sql, connsql);
             SqlDataReader dta = cmd.ExecuteReader();
@@ -126,7 +126,7 @@ namespace QLTN
         }
         private void btn_Nop_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btn_Truoc_Click(object sender, EventArgs e)
@@ -138,7 +138,7 @@ namespace QLTN
                 txt_B.Clear();
                 txt_C.Clear();
                 txt_D.Clear();
-                if(Thutu <= 1)
+                if (Thutu <= 1)
                 {
                     MessageBox.Show("Đây là câu đầu tiên");
                 }
@@ -203,11 +203,6 @@ namespace QLTN
             }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
-    //
 }
 

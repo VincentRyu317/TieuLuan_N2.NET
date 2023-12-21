@@ -21,7 +21,7 @@ namespace QLTN
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string ID;
+            string ID = txtID.Text;
             string ND = txtCauhoi.Text;
             string A = txtCauA.Text;
             string B = txtCauB.Text;
@@ -61,7 +61,8 @@ namespace QLTN
 
             Connect.Instance.GetConnection();
             cmd.ExecuteNonQuery();
-            dataGridView1.Rows.Add(txtCauhoi.Text, txtCauA.Text, txtCauB.Text, txtCauC.Text, txtCauD.Text, txtDapandung.Text);
+            dataGridView1.Rows.Add(txtID.Text, txtCauhoi.Text, txtCauA.Text, txtCauB.Text, txtCauC.Text, txtCauD.Text, txtDapandung.Text);
+            txtID.Clear();
             txtCauhoi.Clear();
             txtCauA.Clear();
             txtCauB.Clear();
